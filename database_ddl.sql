@@ -468,3 +468,54 @@ ALTER TABLE "CAR_CLASS"
       ON UPDATE NO ACTION
 ;
 
+-- SAMPLE DATA
+
+INSERT INTO "ADDRESS" ("ADDRESS1", "ADDRESS2", "POSTAL_CODE", "CITY") VALUES ('a', 'a', 'a', 'a');
+
+INSERT INTO "EMPLOYEE" ("ID", "PASSWORD", "FIRST_NAME", "LAST_NAME", "PESEL", "SALARY", "ACCOUNT_NO", "ADDRESS_ID") VALUES 
+  ('admin', 'password', 'a', 'a', '1', '1', '1', '1'),
+  ('worker', 'password', 'a', 'a', '1', '1', '1', '1');
+
+INSERT INTO "CUSTOMER" ("ID", "PASSWORD", "FIRST_NAME", "LAST_NAME", "PESEL", "LICENSE_NO", "REGISTEREDAT", "ADDRESS_ID")
+  VALUES ('a', 'a', 'a', 'a', '1', '1', '2021-01-21', '1');
+
+INSERT INTO "ROLE" ("ID", "NAME") VALUES 
+  ('0', 'Administrator'),
+  ('1', 'Pracownik');
+
+INSERT INTO "EMPLOYEE_ROLE" VALUES 
+  ('0', 'admin'),
+  ('1', 'worker');
+
+INSERT INTO "CAR_BRAND" ("ID", "LOGO_URL") VALUES 
+  ('Ford', 'ford'),
+  ('Toyota', 'toyota'),
+  ('Volkswagen', 'vw'),
+  ('Skoda', 'skoda'),
+  ('BMW', 'bmw');
+
+INSERT INTO "CAR_CLASS" ("CLASS", "PRICE") VALUES 
+  ('Hatchback', '25'),
+  ('Combi', '30'),
+  ('Sedan', '35');
+
+INSERT INTO "CAR_MODEL" ("ID", "CAR_CLASS_ID", "CAR_BRAND_ID") VALUES 
+  ('Corolla', '1', 'Toyota'),
+  ('Yaris', '1', 'Toyota'),
+  ('Auris', '1', 'Toyota'),
+  ('Golf', '1', 'Volkswagen'),
+  ('Polo', '1', 'Volkswagen'),
+  ('Jetta', '3', 'Volkswagen'),
+  ('Fabia', '1', 'Skoda'),
+  ('Octavia', '2', 'Skoda'),
+  ('Seria 1', '1', 'BMW'),
+  ('Seria 3', '2', 'BMW'),
+  ('Seria 5', '3', 'BMW'),
+  ('Focus', '2', 'Ford'),
+  ('Mondeo', '3', 'Ford'),
+  ('Mustang', '3', 'Ford');
+
+INSERT INTO "CAR" VALUES 
+  ('1', '2020-01-01', 'WZ0001', 'Corolla'),
+  ('2', '2020-01-01', 'WZ0002', 'Octavia'),
+  ('3', '2020-01-01', 'WZ0003', 'Seria 5');
